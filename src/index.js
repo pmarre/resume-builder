@@ -1,12 +1,27 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
+import $ from 'jquery';
+import Popper from 'popper.js';
+import 'bootstrap/dist/js/bootstrap.bundle.min';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import PersonalInfo from './Components/PersonalInfo';
+import Skills from './Components/Skills';
+import WorkHistory from './Components/WorkHistory';
+import Navigation from './Components/Navigation';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const App = () => {
+  return (
+    <div className="main-body">
+      <Navigation />
+      <div className="row justify-content-center">
+        <div className="resume-information  col-8 mt-5">
+          <PersonalInfo />
+          <Skills />
+          <WorkHistory />
+        </div>
+      </div>
+    </div>
+  );
+};
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<App />, document.querySelector('#root'));
