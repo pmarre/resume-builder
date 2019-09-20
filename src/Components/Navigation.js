@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 class Navigation extends React.Component {
   render() {
@@ -38,7 +39,7 @@ class Navigation extends React.Component {
               <a
                 className="nav-link disabled"
                 href="#"
-                tabindex="-1"
+                tabIndex="-1"
                 aria-disabled="true">
                 Disabled
               </a>
@@ -50,4 +51,4 @@ class Navigation extends React.Component {
   }
 }
 
-export default Navigation;
+export default connect(mapStateToProps)(Navigation);

@@ -24,12 +24,17 @@ class PersonalInfo extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     document.querySelector('form').style.display = 'none';
-    alert(`Hi, ${this.state.fname}`);
   }
 
   render() {
     return (
       <div className="form-container container-fluid">
+        <div className="resumeHeader row">
+          <div className="col">
+            <h1 className="resume--name">{`${this.state.fname} ${this.state.lname}`}</h1>
+            <span>{`Phone: ${this.state.tel} Email: ${this.state.email}`}</span>
+          </div>
+        </div>
         <div className="form-group row">
           <div className="col-md">
             <form className="form" onSubmit={this.handleSubmit}>
@@ -89,15 +94,8 @@ class PersonalInfo extends React.Component {
                 <div className="col">
                   <input
                     type="submit"
-                    value="Submit"
+                    value="Complete"
                     className="btn btn-primary"
-                  />
-                </div>
-                <div className="col">
-                  <input
-                    type="button"
-                    value="Clear"
-                    className="btn btn-danger"
                   />
                 </div>
               </div>

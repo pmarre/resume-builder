@@ -4,6 +4,7 @@ import Popper from 'popper.js';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
 import PersonalInfo from './Components/PersonalInfo';
 import Skills from './Components/Skills';
 import WorkHistory from './Components/WorkHistory';
